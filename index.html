@@ -6,41 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemlalit Mali | Developer, Programmer</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="sidebar">
-            <div class="logo">
-                <div class="logo1">Port</div>
-                <div class="logo2">folio</div>
+        <div class="sidebar sideGo">
+
+            <!-- dark mode toggle -->
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="darkModeToggle" class="toggle-checkbox">
+                <label for="darkModeToggle" class="toggle-label">
+                    <span class="toggle-ball">
+                        <img id="sun" src="images/sun.png" alt="">
+                        <img id="moon" src="images/moon.png" alt=""></span>
+                </label>
             </div>
+
             <ul>
-                <li><a href="/home.html">Home</a></li>
-                <li><a href="/intro.html">My Intro</a></li>
-                <li><a href="/resume.txt">Resume</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="/contact.html">Contact me</a></li>
+                <li><i class="fas fa-home"></i><a href="home.html"> Home</a></li>
+                <li><i class="fas fa-file-alt"></i><a href="resume_page/resume.html"> Resume</a></li>
+                <li><i class="fas fa-book"></i><a href="notes_page/notes_page.html"> Notes</a></li>
+                <li><i class="fas fa-blog"></i><a href="blog_page/blog.html"> Blogs</a></li>
+                <li><i class="fas fa-cogs"></i><a href="services_page/services.html"> Services</a></li>
+                <li><i class="fas fa-phone"></i><a href="contact_page/contact.html"> Contact</a></li>
             </ul>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <ul class="social-icons">
+                        <li><a target="_blank" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://github.com"><i class="fab fa-github"></i></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a target="_blank" href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                    <p>© 2024 Hemlalit Mali</p> <p>All Rights Reserved</p>
+                </div>
+                <div id="visitCount">Visitors: 0</div>
+            </footer>
         </div>
         <div class="main">
+
+            <div class="icon">
+                <img src="images/ham.png" alt="" class="ham" width="50">
+                <img src="images/cross.png" alt="" class="cross invert" width="50">
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+
             <div class="Infocontainer">
                 <div class="myinfo">
-                    <div class="intro">Hello!! I am</div>
-                    <div class="name">Hemlalit Mali</div>
-                    <div class="about">I'm a student of Information Technolgy, I like to build amazing Projects</div>
+                    <div class="intro">Hello!</div>
+                    <div class="name"><span>I'm </span><span id="typing" class="typing"></span></div>
+                    <div id="about" class="about">I’m a student of Information Technology. I like building amazing
+                        projects.</div>
                     <div class="btn">
-                        <button src="/resume.txt">Download CV</button>
+                        <button>Download CV</button>
                         <button>Contact me</button>
                     </div>
                 </div>
                 <div class="pic">
-                    <img src="/img.png" alt="">
+                    <img src="images/pic.jpg" alt="Profile Picture">
                 </div>
-
             </div>
         </div>
     </div>
+
+    <div class="testimonial-slider">
+        <div class="testimonial-item">"Great work!" - Client A</div>
+        <div class="testimonial-item">"Highly recommended!" - Client B</div>
+        <div class="testimonial-item">"Amazing experience!" - Client C</div>
+        <div class="next"><i class="fa-solid fa-forward"></i></div>
+        <div class="prev"><i class="fa-solid fa-backward"></i></div>
+    </div>
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
