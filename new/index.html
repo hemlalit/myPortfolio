@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Portfolio</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+        }
+
+        header {
+            background-color: #28a745;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s;
+        }
+
+        header.dark-mode {
+            background-color: #1b5e20;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            position: relative;
+            animation: fadeInSlide 1s ease-out;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4edda;
+        }
+
+        .container {
+            width: 90%;
+            margin: 40px auto;
+            max-width: 1200px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards 0.5s;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            border-bottom: 3px solid #28a745;
+            padding-bottom: 10px;
+            color: #28a745;
+            position: relative;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode h2 {
+            border-color: #1b5e20;
+            color: #28a745;
+        }
+
+        .skills,
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .skill,
+        .project {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 45%;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        }
+
+        .skill:hover,
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        body.dark-mode .skill,
+        body.dark-mode .project {
+            background-color: #333;
+            color: #f5f5f5;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.0);
+        }
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: background-color 0.3s, transform 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #1b5e20;
+            transform: rotate(360deg);
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background-color: #f5f5f5;
+            color: #28a745;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer a {
+            margin: 0 15px;
+            color: #fff;
+            font-size: 1.5em;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        footer a:hover {
+            color: #d4edda;
+            transform: rotate(10deg);
+        }
+
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLine {
+            from {
+                transform: translateX(-100px);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <a href="#photo"><i class="fas fa-user-circle"></i></a>
+            <a href="#skills"><i class="fas fa-code"></i></a>
+            <a href="#projects"><i class="fas fa-briefcase"></i></a>
+            <a href="#contact"><i class="fas fa-envelope"></i></a>
+        </nav>
+    </header>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <!-- Photo Section -->
+        <section id="photo">
+            <h2>My Photo</h2>
+            <img src=".jpg" alt="Your Photo">
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Programming Languages</h3>
+                    <p>JavaScript, Python, PHP, Dart</p>
+                </div>
+                <div class="skill">
+                    <h3>Frameworks</h3>
+                    <p>Flutter, React, Laravel</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>A brief description of your first project. Talk about the technologies used and your role in the
+                        project.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 2</h3>
+                    <p>A brief description of your second project. Mention the features and how it was developed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Email: your.email@example.com</p>
+            <p>Phone: +123 456 7890</p>
+            <div>
+                <h3>Connect with me</h3>
+                <a href="https://www.linkedin.com/in/yourname" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <a href="https://www.linkedin.com/in/yourname" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script> function toggleDarkMode() { document.body.classList.toggle('dark-mode'); } </script>
+</body>
+
+</html>

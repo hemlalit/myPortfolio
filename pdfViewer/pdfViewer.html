@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Viewer | Hemlalit Mali</title>
+  <style>
+    /* General reset and body styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    } */
+
+    /* Container styling */
+    #pdf-container {
+      width: 50%;
+      /* max-width: 800px; */
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    /* Controls styling */
+    #pdf-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-bottom: 10px;
+      padding: 10px 20px;
+      background-color: #f3f4f6;
+      border-radius: 6px;
+    }
+
+    #pdf-controls button {
+      padding: 8px 12px;
+      background-color: #66ff66;
+      color: #222;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #pdf-controls button:hover {
+      background-color: #222;
+      color: #fff;
+    }
+
+    #pdf-controls span {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* Canvas styling */
+    #pdf-render {
+      width: auto;
+      margin: 10px auto;
+      border: 1px solid #222;
+    }
+
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      #pdf-controls {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      #pdf-controls button {
+        width: 100%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div id="pdf-container">
+
+    <div id="pdf-controls">
+      <button id="prev-page">Previous</button>
+      <button id="next-page">Next</button>
+      <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+      <button id="zoom-in">Zoom In</button>
+      <button id="zoom-out">Zoom Out</button>
+      <button id="downloadPdf">Download PDF</button>
+    </div>
+    <div id="pdf-name"></div>
+    <canvas id="pdf-render"></canvas>
+  </div>
+
+
+
+
+  <!-- Include PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script type="module" src="pdfViewer.js" defer></script>
+</body>
+
+</html>

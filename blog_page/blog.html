@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Hemlalit Mali</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+
+             <!-- dark mode toggle -->
+             <div class="dark-mode-toggle">
+                <input type="checkbox" id="darkModeToggle" class="toggle-checkbox">
+                <label for="darkModeToggle" class="toggle-label">
+                    <span class="toggle-ball">
+                        <img id="sun" src="../images/sun.png" alt="">
+                        <img id="moon" src="../images/moon.png" alt=""></span>
+                </label>
+            </div>
+
+            <ul>
+                <li><i class="fas fa-home"></i><a href="../home.html">Home</a></li>
+                <li><i class="fas fa-file-alt"></i><a href="../resume_page/resume.html">Resume</a></li>
+                <li><i class="fas fa-book"></i><a href="../notes_page/notes_page.html"> Notes</a></li>
+                <li><i class="fas fa-rss"></i><a href="blog.html">Feed</a></li>
+                <li><i class="fas fa-cogs"></i><a href="../services_page/services.html">Services</a></li>
+                <li><i class="fas fa-phone"></i><a href="../contact_page/contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <ul class="social-icons">
+                        <li><a target="_blank" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://github.com"><i class="fab fa-github"></i></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a target="_blank" href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                    <p>© 2024 Hemlalit Mali | All Rights Reserved</p>
+                </div>
+            </footer>
+        </div>
+        <div class="main contentShift">
+            <div class="icon">
+                <img src="../images/ham.png" alt="Menu" class="ham">
+                <img src="../images/cross.png" alt="Close" class="cross invert">
+            </div>
+
+            <h1 class="page-title">Blog</h1>
+            <div class="blog-container">
+                <!-- Existing Blog Post Card -->
+                <div class="blog-card">
+                    <img src="blog1.jpg" alt="Blog Post 1" class="blog-image">
+                    <h2>My Journey with Flutter</h2>
+                    <p>A look into my experience with developing mobile applications using Flutter and what I’ve learned.</p>
+                    <a href="blog1.html" class="read-more">Read More</a>
+                </div>
+            
+                <!-- Existing Blog Post Card -->
+                <div class="blog-card">
+                    <img src="blog2.jpg" alt="Blog Post 2" class="blog-image">
+                    <h2>Understanding Node.js</h2>
+                    <p>This blog discusses how Node.js enables fast, scalable network applications and my personal take on using it for backend development.</p>
+                    <a href="blog2.html" class="read-more">Read More</a>
+                </div>
+            
+                <!-- Dynamic Blogs Container -->
+                <div id="blog-posts"></div>
+            
+                <!-- Load More Button -->
+                <button class="load-more-btn">Load More</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="blog.js"></script>
+</body>
+
+</html>
